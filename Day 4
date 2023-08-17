@@ -1,0 +1,311 @@
+package pack2;
+class D
+{
+  static void test(int i)
+  {
+    System.out.println("from test:"+i);
+  }
+  public static void main(String[] arg)
+  {
+    int m;
+    test(m=10);
+    System.out.println("done");
+  }
+}
+
+package pack2;
+class E
+{
+  static void test(int i,int j)
+  {
+    System.out.println("i="+i+", j="+j);
+  }
+  public static void main(String[] arg)
+  {
+    test(10,20);
+    int i=200;
+    test(i,500);
+    test(2000,i);
+    test(i,i);
+    System.out.println("done");
+  }
+}
+
+package pack2;
+class F
+{
+  static void test(int i)
+  {
+    System.out.println("test:"+i);
+    i=10;
+  }
+  public static void main(String[] arg)
+  {
+    int i=20;
+    System.out.println("main begin:"+i);
+    test(i);
+    System.out.println("main end:"+i);
+  }
+}
+
+package pack2;
+class G
+{
+  static void test(int i)
+  {
+    System.out.println("test:"+ i++);
+    i=10;
+  }
+  public static void main(String[] arg)
+  {
+    int i=10;
+    test(i);
+    System.out.println("main:"+i);
+  }
+}
+
+package pack2;
+class H
+{
+  static void test(int i)
+  {
+    System.out.println("test:"+ i++);
+    System.out.println("test:"+ i);
+  }
+  public static void main(String[] arg)
+  {
+    int i=10;
+    test(i);
+    System.out.println("main:"+i);
+  }
+}
+
+package pack2;
+class I
+{
+  static void test(boolean flag,int x)
+  {
+    System.out.println("from test");
+    System.out.println(flag);
+    System.out.println(x);
+  }
+  public static void main(String[] arg)
+  {
+    test(true,20);
+    System.out.println("--------");
+    boolean f1=false;
+    test(f1,30);
+  }
+}
+
+package pack2;
+class J
+{
+  static void test(boolean d1,char c1)
+  {
+    System.out.println("from test");
+    System.out.println(d1);
+    System.out.println(c1);
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("from main");
+    test(90.9090,'a');
+    double v1=89.0909;
+    char v2='s';
+    test(v1,v2);
+  }
+}
+
+package pack2;
+class K
+{
+  static int test()
+  {
+    int i=0;
+    return i++;
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println(test());
+  }
+}
+
+package pack2;
+class L
+{
+  static int test()
+  {
+    int i=0;
+    return i++;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(test());
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class M
+{
+  static int test(int i)
+  {
+    return i++;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(test(i));
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class N
+{
+  static int test(int i)
+  {
+    return i--;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(i);
+    System.out.println(test(i));
+    System.out.println(i);
+    i=test(i);
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class O
+{
+  static int test(int i)
+  {
+    return ++i;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(test(i));
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class P
+{
+  static int test(int i)
+  {
+    return --i;
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println(test(9));
+    int i=0;
+    System.out.println(test(i));
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class Q
+{
+  static int test(int i)
+  {
+    return i++;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(test(i++));
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class R
+{
+  static int test(int i)
+  {
+    return i--;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(test(i++));
+    System.out.println(i);
+    i=0;
+    System.out.println(test(i--));
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class S
+{
+  static int test(int i)
+  {
+    return ++i;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(test(i++));
+    System.out.println(i);
+    i=0;
+    System.out.println(test(i--));
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class T
+{
+  static int test(int i)
+  {
+    return ++i;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(i);
+    i=test(i++);
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class U
+{
+  static int test(int i)
+  {
+    return i--;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    System.out.println(i);
+    i=test(i--);
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class Y
+{
+  static int test(int i)
+  {
+    return ++i;
+  }
+  public static void main(String[] arg)
+  {
+    int i=0;
+    int j=i++ + i + test(i++) + ++i + test(i++) + i + --i + test(i--) + i + i + test(i--) + ++i;
+    System.out.println(i);
+    System.out.println(j);
+  }
+}
