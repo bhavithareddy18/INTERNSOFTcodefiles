@@ -1,0 +1,354 @@
+package pack1;
+class A
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Hello World");
+  }
+}
+
+package pack1;
+class A
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Hello World");
+    System.out.println("Hello World");
+    System.out.println("Hello World");
+    System.out.println("Hello World");
+  }
+  public static void test()
+  {
+    System.out.println("From test");
+  }
+}
+
+package pack1;
+class B
+{
+  public static void test()
+  {
+    System.out.println("From test");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("From main");
+  }
+}
+
+package pack1;
+class C
+{
+  public static void test1()
+  {
+    System.out.println("From test1");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("From main");
+  }
+  public static void test2()
+  {
+    System.out.println("From test2");
+  }
+}
+
+package pack1;
+class D
+{
+  public static void test()
+  {
+    System.out.println("From test");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("Main Begin");
+    test();
+    System.out.println("Main End");
+  }
+}
+
+package pack1;
+class E
+{
+  public static void test1()
+  {
+    System.out.println("From test1");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("Main Begin");
+    test1();
+    test2();
+    System.out.println("Main End");
+  }
+  public static void test2()
+  {
+    System.out.println("From test2");
+  }
+}
+
+package pack1;
+class F
+{
+  public static void test1()
+  {
+    System.out.println("From test1");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("Main Begin");
+    test1();
+    System.out.println("--------");
+    test1();
+    System.out.println("Main End");
+  }
+}
+
+package pack1;
+class G
+{
+  static void test1()
+  {
+    System.out.println("From test1");
+  }
+  static void test2()
+  {
+    System.out.println("test2 begin");
+    test1();
+    System.out.println("test2 end");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("Main Begin");
+    test1();
+    test2();
+    System.out.println("Main End");
+  }
+}
+
+class H
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Hello World");
+    test();
+  }
+}
+
+class I
+{
+  static void test()
+  {
+    System.out.println("from test");
+    System.out.println("from test");
+  }
+  public static void main(String[] arg)
+  {
+    test();
+    System.out.println("--------");
+    test();
+    test();
+  }
+}
+
+package pack1;
+class K
+{
+  static void test()
+  {
+    System.out.println("from test begin");
+    System.out.println("from test end");
+    return;
+  }
+  public static void main(String[] arg)
+  {
+    test();
+    System.out.println("--------");
+  }
+}
+
+package pack1;
+class L
+{
+  static void test()
+  {
+    System.out.println("test begin");
+    if(true)
+    {
+      System.out.println("from test end");
+      return;
+    }
+    System.out.println("test end");
+  }
+  public static void main(String[] arg)
+  {
+    test();
+    System.out.println("--------");
+  }
+}
+
+package pack1;
+class M
+{
+  static void test()
+  {
+    System.out.println("test begin");
+    return;
+    System.out.println("test end");
+  }
+  public static void main(String[] arg)
+  {
+    test();
+    System.out.println("--------");
+  }
+}
+
+package pack1;
+class N
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    System.out.println("main end");
+    return;
+  }
+}
+
+package pack1;
+class O
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    if(100==100)
+    {
+      System.out.println("from if");
+      return;
+    }
+    System.out.println("main end");
+  }
+}
+
+package pack1;
+class P
+{
+  public static void main(String[] arg)
+  {
+    if(true)
+    {
+      return;
+      System.out.println("from if");
+    }
+    System.out.println("main end");
+  }
+}
+
+package pack1;
+class Q
+{
+  static int test()
+  {
+    System.out.println("test");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("from main");
+    test();
+  }
+}
+
+package pack1;
+class S
+{
+  static int test()
+  {
+    System.out.println("test");
+    return 20;
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("from main begin");
+    int i=test();
+    System.out.println(i);
+    System.out.println("from main end");
+  }
+}
+
+package pack1;
+class T
+{
+  static int test()
+  {
+    System.out.println("from test");
+    return 10;
+  }
+  public static void main(String[] arg)
+  {
+    int i=test();
+    int j=10+test();
+    System.out.println(test());
+    System.out.println(i);
+    System.out.println(j);
+    System.out.println("i+j+test());
+  }
+}
+
+package pack1;
+class U
+{
+  static int test()
+  {
+    System.out.println("from test");
+    return 10;
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    test();
+    System.out.println("main begin");
+  }
+}
+
+package pack1;
+class V
+{
+  static void test()
+  {
+    System.out.println("from test");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println(test());
+  }
+}
+
+package pack1;
+class W
+{
+  static void test()
+  {
+    System.out.println("from test");
+  }
+  public static void main(String[] arg)
+  {
+    int i=10+test();
+    System.out.println(test());
+  }
+}
+
+package pack1;
+class X
+{
+  static int test()
+  {
+    int i=10;
+    return i;
+  }
+  public static void main(String[] arg)
+  {
+    test();
+    System.out.println(test());
+    System.out.println(test()+test());
+  }
+}
