@@ -1,0 +1,313 @@
+package pack1;
+class A
+{
+  static
+  {
+    System.out.println("SIB");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("main");
+  }
+}
+
+package pack1;
+class B
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main");
+  }
+  static
+  {
+    System.out.println("From SIB");
+  }
+}
+
+package pack1;
+class C
+{
+  static
+  {
+    System.out.println("From SIB1");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("main");
+  }
+  static
+  {
+    System.out.println("From SIB2");
+  }
+}
+
+package pack1;
+class D
+{
+  static int i;
+  static
+  {
+    i=2;
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println(i);
+  }
+}
+
+package pack1;
+class E
+{
+  static int i=1;
+  static
+  {
+    i=20;
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println(i);
+  }
+}
+
+package pack1;
+class F
+{
+  static
+  {
+    System.out.println(i);
+  }
+  static int i;
+  public static void main(String[] arg)
+  {
+    System.out.println(i);
+  }
+}
+
+package pack1;
+class I
+{
+  static int i;
+  static
+  {
+    i=j;
+  }
+  static int j=20;
+  public static void main(String[] arg)
+  {
+    System.out.println("done");
+  }
+}
+
+package pack1;
+class J
+{
+  static int i=test();
+  static
+  {
+    System.out.println("From SIB1");
+  }
+  static int test()
+  {
+    System.out.println("test method");
+    return 10;
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("done");
+    System.out.println(i);
+  }
+  static
+  {
+    System.out.println("SIB2");
+  }
+}
+
+package pack1;
+class K
+{
+  static int i=test();
+  static
+  {
+    System.out.println("SIB1 Begin");
+    main(null);
+    System.out.println("SIB1 End");
+  }
+  static int test()
+  {
+    System.out.println("test method begin");
+    main(mull);
+    System.out.println("test end method");
+    return 20;
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("main "+i);
+  }
+}
+
+package pack1;
+class L
+{
+  static int i;
+}
+
+class M
+{
+  static int i=10;
+  public static void main(String[] arg)
+  {
+    System.out.println(A.i);
+  }
+}
+
+package pack2;
+class A
+{
+  static int i;
+  public static void main(String[] arg)
+  {
+    System.out.println("from main:"+i);
+    System.out.println("from main:"+A.i);
+  }
+}
+
+class B
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("from main:"+i);
+    System.out.println("from main:"+A.i);
+  }
+}
+
+package pack2;
+class C
+{
+  static
+  {
+    System.out.println("C-SIB");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("C-main:");
+  }
+}
+
+package pack2;
+class D
+{
+  static
+  {
+    System.out.println("D-SIB");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("D-main:");
+  }
+}
+
+package pack2;
+class E
+{
+  static
+  {
+    System.out.println("E-SIB-2");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("E-main:");
+  }
+  static
+  {
+    System.out.println("E-SIB-2");
+  }
+}
+
+package pack2;
+class F
+{
+  static
+  {
+    System.out.println("F-SIB-1");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("F-main:");
+  }
+  static
+  {
+    System.out.println("F-SIB-2");
+  }
+}
+
+package pack2;
+class L
+{
+  static
+  {
+    System.out.println("L-SIB-1");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("L-main:");
+  }
+}
+
+package pack2;
+class M
+{
+  static
+  {
+    System.out.println("M-SIB-1");
+  }
+  public static void main(String[] arg)
+  {
+    L.main(null);
+    System.out.println("M-main:");
+  }
+}
+
+package pack2;
+class N
+{
+  static int i=10;
+  static
+  {
+    System.out.println("N-SIB-1");
+  }
+  static void test()
+  {
+    System.out.println("from test method Class N");
+  }
+  static
+  {
+    System.out.println("from N SIB-2");
+  }
+}
+
+package pack2;
+class O
+{
+  static
+  {
+    System.out.println("O-SIB-1");
+  }
+  public static void main(String[] arg)
+  {
+    System.out.println("O-main:");
+    N.test();
+    System.out.println(N.i);
+    System.out.println("from main method");
+    System.out.println(N.i);
+    System.out.println("from main method");
+    System.out.println(N.i);
+    N.test();
+    System.out.println("from main method");
+    N.test();
+    System.out.println("O-main:");
+  }
+  static
+  {
+    System.out.println("from O SIB-2");
+  }
+}
