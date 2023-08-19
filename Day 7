@@ -1,0 +1,210 @@
+package pack1;
+class A
+{
+  satic int i=10;
+}
+
+package pack1;
+class B
+{
+  satic void test()
+  {
+    System.out.println("from test");
+  }
+}
+
+package pack1;
+class C
+{
+  public satic void main(String[] arg)
+  {
+    System.out.println(A.i);
+    B.test();
+  }
+}
+
+package pack1;
+class D
+{
+  static
+  {
+    System.out.println("D-SIB");
+  }
+  public satic void main(String[] arg)
+  {
+    System.out.println("D-main");
+  }
+}
+
+package pack1;
+class E
+{
+  static
+  {
+    System.out.println("E-SIB");
+  }
+  public satic void main(String[] arg)
+  {
+    System.out.println("E-main-begin");
+    D.main(null);
+    System.out.println("-------------");
+    D.main(null);
+    System.out.println("E-main-end");
+  }
+}
+
+package pack1;
+class F
+{
+  static int i;
+  static void test()
+  {
+    System.out.println("from test:"+i);
+  }
+}
+
+package pack1;
+class G
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("from main:"+F.i);
+    F.test();
+  }
+}
+
+package pack1;
+class H
+{
+  int i;
+  public satic void main(String[] arg)
+  {
+    System.out.println(i);
+  }
+  static void test()
+  {
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class A
+{
+  int i;
+  public satic void main(String[] arg)
+  {
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class B
+{
+  void test()
+  {
+    System.out.println("test");
+  }
+  public satic void main(String[] arg)
+  {
+    test();
+    System.out.println("Hello world");
+  }
+}
+
+package pack2;
+class C
+{
+  int i;
+  satic void test()
+  {
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class D
+{
+  void test1()
+  {
+    System.out.println("from test1");
+  }
+  static void test()
+  {
+    tes1();
+    System.out.println("from test2");
+  }
+}
+
+package pack2;
+class E
+{
+  int i;
+  static
+  {
+    System.out.println(i);
+  }
+}
+
+package pack2;
+class F
+{
+  void test1()
+  {
+  }
+  static
+  {
+    test1();
+  }
+}
+
+package pack2;
+class H
+{
+  void test()
+  {
+    System.out.println("from test");
+  }
+  static
+  {
+    H h1=new H();
+    h1.test();
+    System.out.println("Hello World");
+  }
+}
+
+package pack2;
+class I
+{
+  int x;
+  static void test()
+  {
+    I rv=new I();
+    System.out.println(rv.x);
+  }
+}
+
+package pack2;
+class J
+{
+  int i,j;
+  static int k,l;
+  void test()
+  {
+  }
+  static void test1()
+  {
+    System.out.println(i);
+  }
+  static void test2()
+  {
+  }
+  static
+  {
+    k=10;
+  }
+  static
+  {
+    i=10;
+  }
+}
+
