@@ -1,0 +1,306 @@
+package pack3;
+class F
+{
+  int i;
+  F(int j)
+  {
+    i=j;
+    System.out.println("From()");
+  }
+  public static void main(String[] arg)
+  {
+    F f1=new F();
+    System.out.println(f1.i);
+  }
+}
+
+package pack3;
+class G
+{
+  G()
+  {
+    System.out.println("From G()");
+  }
+  public static void main(String[] arg)
+  {
+    G g1=new G();
+    System.out.println("done");
+  }
+}
+
+package pack3;
+class H
+{
+  public static void main(String[] arg)
+  {
+    H h1=new H();
+    System.out.println("done");
+  }
+}
+
+package pack3;
+class I
+{
+  public static void main(String[] arg)
+  {
+    I obj=new I(90);
+    System.out.println("done");
+  }
+}
+
+package pack3;
+class J
+{
+  J()
+  {
+    System.out.println("J()");
+  }
+  J(int i)
+  {
+    System.out.println("J(int)");
+  }
+  public static void main(String[] arg)
+  {
+    J j1=new J();
+    System.out.println("-------");
+    J j2=new J(20);
+    System.out.println("-------");
+    J j3=new J();
+    System.out.println("-------");
+    J j2=new J(50);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class K
+{
+  K(int i)
+  {
+    System.out.println("K(int)");
+  }
+  K(boolean b)
+  {
+    System.out.println("K(boolean)");
+  }
+  public static void main(String[] arg)
+  {
+    K k1=new K(90);
+    System.out.println("-------");
+    K k2=new K(true);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class L
+{
+  L(int i,int j)
+  {
+    System.out.println("L(int,int)");
+  }
+  L(int i,double j)
+  {
+    System.out.println("L(int,double)");
+  }
+  public static void main(String[] arg)
+  {
+    L obj1=new L(10,20);
+    System.out.println("-------");
+    L obj2=new L(10,20.0);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class M
+{
+  M(int i)
+  {
+    System.out.println("M(int)");
+  }
+  public static void main(String[] arg)
+  {
+    M obj1=new M(10);
+    System.out.println("-------");
+    M obj2=new M();
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class N
+{
+  N()
+  {
+    System.out.println("N()");
+  }
+  N(int i)
+  {
+    this();
+    System.out.println("N(int)");
+  }
+  public static void main(String[] arg)
+  {
+    N obj1=new N();
+    System.out.println("-------");
+    N obj2=new N(10);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class O
+{
+  O()
+  {
+    this(10);
+    System.out.println("O()");
+  }
+  O(int i)
+  {
+    System.out.println("O(int)");
+  }
+  public static void main(String[] arg)
+  {
+    O obj1=new O();
+    System.out.println("-------");
+    O obj2=new O(20);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class P
+{
+  P()
+  {
+    this(10,20);
+    System.out.println("P()");
+  }
+  P(int i,int j)
+  {
+    System.out.println("P(int,int)");
+  }
+  public static void main(String[] arg)
+  {
+    P obj1=new P();
+    System.out.println("-------");
+    O obj2=new O(20);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class Q
+{
+  Q()
+  {
+    this(10);
+    System.out.println("Q()");
+  }
+  Q(int i)
+  {
+    this(1,20);
+    System.out.println("Q(int,int)");
+  }
+  Q(int i,int j)
+  {
+    System.out.println("Q(int,int)");
+  }
+  public static void main(String[] arg)
+  {
+    Q q1=new Q();
+    System.out.println("-------");
+    Q q2=new Q(1,2);
+    System.out.println("-------");
+    Q q3=new Q(1);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class R
+{
+  R()
+  {
+    System.out.println("R()");
+  }
+  R(int i)
+  {
+    System.out.println("R(int)");
+    this();
+  }
+  public static void main(String[] arg)
+  {
+    R r1=new R();
+    System.out.println("-------");
+    R r2=new R(20);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class S
+{
+  S()
+  {
+    System.out.println("S()");
+  }
+  S(int i)
+  {
+    this();
+    System.out.println("S(int)");
+  }
+  public static void main(String[] arg)
+  {
+    S s1=new S();
+    System.out.println("-------");
+    S s2=new S(20);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class T
+{
+  T()
+  {
+    System.out.println("T()");
+  }
+  T(int i)
+  {
+    T t1=new T();
+    System.out.println("T(int)");
+  }
+  public static void main(String[] arg)
+  {
+    T t1=new T();
+    System.out.println("-------");
+    T t2=new T(20);
+    System.out.println("-------");
+  }
+}
+
+package pack3;
+class U
+{
+  U()
+  {
+    this(10);
+    System.out.println("U()");
+  }
+  U(int i)
+  {
+    this();
+    System.out.println("U(int)");
+  }
+  public static void main(String[] arg)
+  {
+    U u1=new U();
+    System.out.println("-------");
+    U u2=new U(20);
+    System.out.println("-------");
+  }
+}
+
