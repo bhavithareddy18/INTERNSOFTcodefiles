@@ -1,0 +1,162 @@
+package pack1;
+class L
+{
+  L()
+  {
+    System.out.println("From L()");
+  }
+}
+class M extends L
+{
+  M()
+  {
+    System.out.println("From M()");
+  }
+}
+class N extends M
+{
+  N()
+  {
+    System.out.println("From N()");
+  }
+}
+class O
+{
+  public static void main(String[] arg)
+  {
+    L obj1=new L();
+    System.out.println("----------");
+    M obj2=new M();
+    System.out.println("----------");
+    N obj3=new N();
+    System.out.println("----------");
+  }
+}
+
+package pack1;
+class P
+{
+  P()
+  {
+    System.out.println("From P()");
+  }
+}
+class Q extends P
+{
+  Q()
+  {
+    super();
+    System.out.println("From Q()");
+  }
+}
+class R
+{
+  public static void main(String[] arg)
+  {
+    P obj1=new P();
+    System.out.println("----------");
+    Q obj2=new Q();
+    System.out.println("----------");
+    P obj3=new P();
+    System.out.println("----------");
+  }
+}
+
+package pack1;
+class S
+{
+  S()
+  {
+    System.out.println("From S()");
+  }
+}
+class R extends S
+{
+  R()
+  {
+    super();
+    System.out.println("From R()");
+  }
+}
+class T extends R
+{
+  T()
+  {
+    System.out.println("From T()");
+  }
+}
+class U
+{
+  public static void main(String[] arg)
+  {
+    T obj1=new T();
+    System.out.println("----------");
+    R obj2=new R();
+    System.out.println("----------");
+    S obj3=new S();
+    System.out.println("----------");
+  }
+}
+
+package pack1;
+class V
+{
+  V(int i)
+  {
+    System.out.println("From V(int)");
+  }
+}
+class W extends V
+{
+  W(int i)
+  {
+    System.out.println("From W(int)");
+  }
+  public static void main(String[] arg)
+  {
+    V obj1=new V(90);
+    System.out.println("----------");
+    W obj2=new W(90);
+    System.out.println("----------");
+  }
+}
+
+package pack1;
+class X
+{
+}
+class Y extends X
+{
+  Y(int i)
+  {
+    System.out.println("From Y(int)");
+  }
+  public static void main(String[] arg)
+  {
+    Y obj1=new Y(10);
+    System.out.println("----------");
+  }
+}
+
+package pack1;
+class A
+{
+  A(int i)
+  {
+    System.out.println("A(int)");
+  }
+}
+class B extends A
+{
+  B()
+  {
+    System.out.println("B()");
+  }
+  public static void main(String[] arg)
+  {
+    A obj1=new A(50);
+    System.out.println("----------");
+    B obj2=new B();
+  }
+}
+
