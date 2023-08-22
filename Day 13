@@ -1,0 +1,80 @@
+package com.airobosoft;
+class A
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    for(int i=1;i<=5;i++)
+    {
+      System.out.println("loop-body:"+i);
+    }
+    System.out.println("main end");
+  }
+}
+
+package com.airobosoft;
+class B
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    for(int i=1;i<=5;i++)
+    {
+      System.out.println("outer-loop:"+i);
+      for(int j=0;i<=5;i++)
+      {
+        System.out.println("inner-loop-begin:"+i",j="+j);
+      }
+    }
+    System.out.println("main end");
+  }
+}
+
+package com.airobosoft;
+class C
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    for(int i=1;i<=5;i++)
+    {
+      System.out.println("outer-loop:"+i);
+      for(int j=0;i<=5;i++)
+      {
+        if(j==2)
+        {
+          continue;
+          //break;
+        }
+        System.out.println("inner-loop-begin:"+i",j="+j);
+      }
+      //break;
+    }
+    System.out.println("main end");
+  }
+}
+
+package com.airobosoft;
+public class F
+{
+  public static void main(String[] arg)
+  {
+    for(int i=0;i<5;i++)
+    {
+      System.out.println("Hello");
+      i++; //i+=2;
+    }
+  }
+}
+
+package com.airobosoft;
+public class J
+{
+  public static void main(String[] arg)
+  {
+    for(int i=0;i<5;i=5) //for(;;)
+    {
+      System.out.println("Hello");
+    }
+  }
+}
