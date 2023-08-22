@@ -1,0 +1,455 @@
+package pack1;
+class P
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    if(true)
+    {
+      System.out.println("if-1-begin");
+      if(false)
+      {
+        System.out.println("if 2 begin");
+        if(true)
+        {
+          System.out.println("if 3 begin");
+          System.out.println("if 3 end");
+        }
+        System.out.println("if 2 end");
+      }
+      System.out.println("if-1-end");
+    }
+    System.out.println("main end");
+  }
+}
+
+package pack1;
+class Q
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    if(true)
+    {
+      System.out.println("if-1-begin");
+      if(false)
+        if(true)
+          System.out.println("from if 3");
+      System.out.println("if-1-end");
+    }
+    System.out.println("main end");
+  }
+}
+
+package pack1;
+class R
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    if(true)
+      if(false)
+        if(true)
+          System.out.println("from if 3");
+    System.out.println("main end");
+  }
+}
+
+package pack1;
+class S
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    if(true)
+    if(false)
+    if(true)
+    System.out.println("from if 3");
+    System.out.println("main end");
+  }
+}
+
+package pack2;
+class A
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    if(true)
+    {
+      System.out.println("if block");
+    }
+    else
+    {
+      System.out.println("From else block");
+    }
+  }
+}
+
+package pack2;
+class B
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    if(false)
+    {
+      System.out.println("if block");
+    }
+    else
+    {
+      System.out.println("From else block");
+    }
+  }
+}
+
+package pack2;
+class C
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("main begin");
+    if(false)
+    {
+      System.out.println("if block");
+    }
+    int i=10;
+    else
+    {
+      System.out.println("From else block");
+    }
+  }
+}
+
+package pack2;
+class D
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Main begin");
+    else
+    {
+      System.out.println("From else block");
+    }
+  }
+}
+
+package pack2;
+class E
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Main begin");
+    if(false)
+    {
+      System.out.println("from if block");
+    }
+    else
+    {
+      int i=10;
+      System.out.println("From else block");
+    }
+    System.out.println("Main end:"+i);
+  }
+}
+
+package pack2;
+class F
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Main begin");
+    int i=0;
+    if(i++ == 0)
+    {
+      System.out.println("if block-stmt1");
+      i=i+2;
+    }
+    else
+    {
+      System.out.println("else block-stmt1");
+      i=i+3;
+      System.out.println("else block-stmt2");
+    }
+    System.out.println("Main end:"+i);
+  }
+}
+
+package pack2;
+class G
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Main begin");
+    int i=0;
+    if(i++ == 1)
+    {
+      System.out.println("if block-stmt1");
+      i=i+2;
+    }
+    else
+    {
+      System.out.println("else block-stmt1");
+      i=i+3;
+      System.out.println("else block-stmt2");
+    }
+    System.out.println("Main end:"+i);
+  }
+}
+
+package pack2;
+class H
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Main begin");
+    if(true)
+    {
+      System.out.println("if block-1");
+      if(true)
+      {
+        System.out.println("if block-2");
+        if(true)
+        {
+          System.out.println("if block-3");
+        }
+        else
+        {
+          System.out.println("else block-3");
+        }
+      }
+      else
+      {
+        System.out.println("else block-2");
+      }
+    }
+    System.out.println("Main end");
+  }
+}
+
+package pack2;
+class I
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Main begin");
+    if(true)
+    {
+      System.out.println("if block-1");
+      if(true)
+      {
+        System.out.println("if block-2");
+        if(true)
+        {
+          System.out.println("if block-3");
+        }
+        else
+        {
+          System.out.println("else block-3");
+        }
+      }
+      else
+      {
+        System.out.println("else block-2");
+      }
+    }
+    else
+    {
+      System.out.println("From else block-1");
+    }
+    System.out.println("Main end");
+  }
+}
+
+package pack2;
+class J
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Main begin");
+    if(false)
+      if(true)
+        if(true)
+          System.out.println("if block-3");
+        else
+          System.out.println("else block-3");
+      else
+        System.out.println("else block-2");
+    else
+      System.out.println("else block-1");
+  }
+}
+
+package pack1;
+class A
+{
+  public static void main(String[] arg)
+  {
+    int i=10;
+    switch(i)
+    {
+      case 2:System.out.println("from case 2");
+             System.out.println("from case 2");
+      case 4:System.out.println("from case 4");
+             System.out.println("from case 4");
+      case 10:System.out.println("from case 10");
+              System.out.println("from case 10");
+    }
+  }
+}
+
+package pack1;
+class C
+{
+  public static void main(String[] arg)
+  {
+    int i=4;
+    switch(i)
+    {
+      case 2:System.out.println("from case 2");
+             System.out.println("from case 2");
+             break;
+      case 4:System.out.println("from case 4");
+             System.out.println("from case 4");
+             break;
+      case 10:System.out.println("from case 10");
+              System.out.println("from case 10");
+              break;
+    }
+  }
+}
+
+package pack1;
+class E
+{
+  public static void main(String[] arg)
+  {
+    int i=12;
+    switch(i)
+    {
+      case 2:System.out.println("from case 2");
+             System.out.println("from case 2");
+             break;
+      case 4:System.out.println("from case 4");
+             System.out.println("from case 4");
+             break;
+      case 10:System.out.println("from case 10");
+              System.out.println("from case 10");
+              break;
+      default:System.out.println("Default method");
+              System.out.println("Default method");
+    }
+  }
+}
+
+package pack1;
+class G
+{
+  public static void main(String[] arg)
+  {
+    int i=3;
+    switch(i)
+    {
+      case 2:
+      case 4:
+      case 6:
+      case 8:
+      case 10:System.out.println("Even number");
+              break;
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 9:System.out.println("Odd number");
+              break;
+      default:System.out.println("Default method");
+    }
+  }
+}
+
+package pack1;
+class H
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Byte MinValue"+Byte.MIN_VALUE);
+    System.out.println("Byte MaxValue"+Byte.MAX_VALUE);
+    System.out.println("Short MinValue"+Short.MIN_VALUE);
+    System.out.println("Short MaxValue"+Short.MAX_VALUE);
+    System.out.println("Int MinValue"+Integer.MIN_VALUE);
+    System.out.println("Int MaxValue"+Integer.MAX_VALUE);
+    }
+  }
+}
+
+package pack1;
+class I
+{
+  public static void main(String[] arg)
+  {
+    byte i=12;
+    switch(i)
+    {
+      case 2:System.out.println("from case 2");
+             System.out.println("from case 2");
+             break;
+      case 140:System.out.println("from case 140");
+             System.out.println("from case 140");
+             break;
+      case 10:System.out.println("from case 10");
+              System.out.println("from case 10");
+              break;
+      default:System.out.println("Default method");
+              System.out.println("Default method");
+    }
+  }
+}
+
+package pack1;
+class K
+{
+  public static void main(String[] arg)
+  {
+    char i='a';
+    char j='b';
+    char k='A';
+    char l='B';
+    System.out.println("i="+(int)i);
+    System.out.println("j="+(int)j);
+    System.out.println("k="+(int)k);
+    System.out.println("l="+(int)l);
+  }
+}
+
+package pack1;
+class M
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("Character Min value:"+ (int) Character.MIN_VALUE);
+    System.out.println("Character Max value:"+ (int) Character.MAX_VALUE);
+    System.out.println("Integer Min value:"+ (int) Integer.MIN_VALUE);
+    System.out.println("Integer Max value:"+ (int) Integer.MAX_VALUE);
+  }
+}
+
+package pack1;
+public class O
+{
+  public static void main(String[] arg)
+  {
+    int numberOfPlayers=0;
+    String sport="volleyball";
+    switch(sport)
+    {
+      case "tennis":numberOfPlayers=1;
+                    break;
+      case "volleyball":numberOfPlayers=6;
+                        break;
+      case "baseball":numberOfPlayers=9;
+                      break;
+    }
+    System.out.println(numberOfPlayers+" players are needed.");
+  }
+}
+
