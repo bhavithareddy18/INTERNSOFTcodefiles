@@ -1,1 +1,160 @@
+package pack1;
+class A
+{
+  private int i;
+  public static void main(String[] arg)
+  {
+    A a1=new A();
+    System.out.println(a1.i);
+  }
+}
+
+package pack1;
+class B
+{
+  private int i;
+}
+class C
+{
+  public static void main(String[] arg)
+  {
+    B b1=new B();
+    System.out.println(b1.i);
+  }
+}
+
+package pack1;
+class D
+{
+  private void test()
+  {
+    System.out.println("test");
+  }
+}
+class E
+{
+  public static void main(String[] arg)
+  {
+    D d1=new D();
+    d1.test();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+class F
+{
+  private static int i=90;
+  static void test()
+  {
+    System.out.println(i);
+  }
+}
+class G
+{
+  public static void main(String[] arg)
+  {
+    System.out.println(F.i);
+  }
+}
+
+package pack1;
+class H
+{
+  private int i;
+  void set(int k)
+  {
+    i=k;
+  }
+  int get()
+  {
+    return i;
+  }
+  public static void main(String[] arg)
+  {
+    H h1=new H();
+    System.out.println(h1.get());
+    h1.set(90);
+    System.out.println(h1.get());
+  }
+}
+
+package pack1;
+class J
+{
+  private int x;
+  int y;
+}
+class K extends J
+{
+  public static void main(String[] arg)
+  {
+    K k1=new K();
+    System.out.println(k1.x);
+    System.out.println(k1.y);
+  }
+}
+
+package pack1;
+class L
+{
+  private void test1()
+  {
+    System.out.println("from test1");
+  }
+  void test2()
+  {
+    System.out.println("from test2");
+  }
+}
+class M extends L
+{
+  public static void main(String[] arg)
+  {
+    M m1=new M();
+    m1.test1();
+    m2.test2();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+class O
+{
+  private O()
+  {
+    System.out.println("O()");
+  }
+}
+class P
+{
+  public static void main(String[] arg)
+  {
+    O o1=new O();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+class Q
+{
+  private Q()
+  {
+    System.out.println("Q()");
+  }
+  Q(int i)
+  {
+  }
+}
+class R extends Q
+{
+  public static void main(String[] arg)
+  {
+    System.out.println("done");
+  }
+  R()
+  {
+    super();
+  }
+}
 
