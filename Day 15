@@ -1,0 +1,62 @@
+package pack1;
+abstract class A
+{
+  void test1()
+  {
+  }
+  abstract void test2();
+}
+
+package pack1;
+abstract class B
+{
+  abstract void test1();
+  abstract void test2();
+  abstract void test3();
+  abstract void test4();
+}
+
+package pack1;
+abstract class C
+{
+  abstract void test1();
+}
+
+package pack1;
+abstract class D
+{
+  void test1();
+}
+
+package pack1;
+abstract class E
+{
+  abstract void test1();
+  {
+  }
+}
+
+package pack1;
+abstract class A
+{
+  abstract void test1();
+  void test2()
+  {
+    System.out.println("from test2");
+  }
+}
+class G extends F
+{
+  void test1()
+  {
+    System.out.println("from test1");
+  }
+  public static void main(String[] arg)
+  {
+    G g1=new G();
+    g1.test1();
+    g2.test2();
+    System.out.println("done");
+  }
+}
+
