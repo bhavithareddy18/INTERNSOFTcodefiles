@@ -1,0 +1,90 @@
+package pack5;
+class E
+{
+}
+class F extends E
+{
+}
+class G extends F
+{
+}
+class H
+{
+  F test()
+  {
+    return null;
+  }
+}
+class I extends H
+{
+  G test()
+  {
+    return null;
+  }
+}
+
+package pack5;
+class J
+{
+}
+class K extends J
+{
+  K test()
+  {
+    return null;
+  }
+}
+class L extends K
+{
+  J test()
+  {
+    return null;
+  }
+}
+
+package pack5;
+class M
+{
+  void test()
+  {
+    System.out.println("from M");
+  }
+}
+class N extends M
+{
+  protected void test()
+  {
+    System.out.println("from N");
+  }
+  public static void main(String[] arg)
+  {
+    N n1=new N();
+    n1.test();
+  }
+}
+
+package pack5;
+abstract class O
+{
+  abstract protected void test();
+}
+class P extends O
+{
+  void test()
+  {
+    System.out.println("from N");
+  }
+}
+
+package pack5;
+interface Q
+{
+  void test();
+}
+class R implements Q
+{
+  void test()
+  {
+  }
+}
+
