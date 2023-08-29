@@ -1,0 +1,43 @@
+package pack2;
+class Manager26
+{
+  public static void main(String[] arg)
+  {
+    A a1=new C();
+    System.out.println(11);
+    B b1=(B) a1;
+    System.out.println(22);
+    C c1=(C) a1;
+    System.out.println(33);
+    D d1=(D) a1;
+    System.out.println(44);
+  }
+}
+
+package pack2;
+class Manager27
+{
+  public static void main(String[] arg)
+  {
+    A a1=new B();
+    System.out.println(a1 instanceof A);
+    System.out.println(a1 instanceof B);
+    System.out.println(a1 instanceof C);
+    System.out.println(a1 instanceof D);
+  }
+}
+
+package pack2;
+class Manager28
+{
+  public static void main(String[] arg)
+  {
+    A a1=new D();
+    System.out.println(a1 instanceof Object);
+    System.out.println(a1 instanceof A);
+    System.out.println(a1 instanceof B);
+    System.out.println(a1 instanceof C);
+    System.out.println(a1 instanceof D);
+  }
+}
+
