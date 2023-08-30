@@ -1,0 +1,87 @@
+package pack1;
+class A
+{
+  public static void main(String[] arg)
+  {
+    final int i=10;
+    int j=20;
+    System.out.println(i);
+    System.out.println(j);
+    System.out.println("----------");
+    i=10;
+    j=20;
+    System.out.println(i);
+    System.out.println(j);
+  }
+}
+
+package pack1;
+class B
+{
+  public static void main(String[] arg)
+  {
+    final int i;
+    i=10;
+    System.out.println(i);
+    //i=10;
+    System.out.println(i);
+  }
+}
+
+package pack1;
+class C
+{
+  public static void main(String[] arg)
+  {
+    final int i=20;
+    int j=i;
+    System.out.println(i);
+    System.out.println(j);
+    j=(i+10);
+    System.out.println(i);
+    System.out.println(j);
+  }
+}
+
+package pack1;
+class D
+{
+  public static void main(String[] arg)
+  {
+    final int i=0;
+    i++;
+    System.out.println(i);
+  }
+}
+
+package pack1;
+class E
+{
+  public static void main(String[] arg)
+  {
+    final E e1=new E();
+    e1=null;
+    System.out.println("done");
+  }
+}
+
+package pack1;
+class L
+{
+  public static void main(String[] arg)
+  {
+    args[0]="hello";
+    System.out.println("done");
+  }
+}
+
+package pack1;
+class M
+{
+  public static void main(final String[] arg)
+  {
+    args=null;
+    System.out.println("done");
+  }
+}
+
