@@ -1,0 +1,36 @@
+package pack1;
+class A
+{
+  int i=10;
+  static class B
+  {
+    void m1()
+    {
+      System.out.println(i);
+    }
+  }
+}
+
+package pack1;
+class A
+{
+  int i=10;
+  void m1()
+  {
+    System.out.println(i);
+  }
+  class B
+  {
+    int j=20;
+    static int k=30;
+    void m2()
+    {
+      System.ouot.println("from m2");
+    }
+    void m3()
+    {
+      System.out.println("from m3");
+    }
+  }
+}
+
