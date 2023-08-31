@@ -1,0 +1,91 @@
+package pack1;
+enum B
+{
+}
+class C
+{
+}
+interface D
+{
+}
+
+package pack1;
+enum B
+{
+  C1,C2,C3,c4;
+}
+
+class B
+{
+  public static final C c1=new C();
+  public static final C c2=new C();
+  public static final C c3=new C();
+  public static final C c4=new C();
+}
+enum Month
+{
+  JAN,FEB,MAR;
+}
+
+package pack1;
+enum E
+{
+  C1,C2,C3,c4;
+}
+class F
+{
+  public static void main(String[] args)
+  {
+    System.out.println(E.C1);
+    System.out.println(E.C2);
+  }
+}
+
+package pack1;
+enum G
+{
+  CON1,CON2,CON3;
+}
+class H
+{
+  public static void main(String[] args)
+  {
+    G g1=G.CON1;
+    G g2=G.CON2;
+    System.out.println(g1);
+    System.out.println(g2);
+  }
+}
+
+package pack1;
+enum I
+{
+  TEST1,TEST2,TEST3;
+}
+class J
+{
+  public static void main(String[] args)
+  {
+    I ref=I.TEST1;
+    System.out.println(ref1);
+    I ref1=I.TEST1;
+    System.out.println(ref1);
+  }
+}
+
+package pack1;
+class O
+{
+  enum I
+  {
+    C1,C2,C3,c4;
+  }
+  public static void main(String[] args)
+  {
+    Test t1=Test.C1;
+    Test t2=Test.C2;
+    System.out.println(t1.ordinal());
+    System.out.println(t2.ordinal());
+  }
+}
+
