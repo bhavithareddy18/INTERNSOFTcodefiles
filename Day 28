@@ -1,0 +1,62 @@
+package pack1;
+public class A
+{
+  public static int i=20;
+  public static void test()
+  {
+    System.out.println("done");
+  }
+}
+
+package pack1;
+public interface B
+{
+  int j=20;
+  String k="abc";
+}
+
+package pack1;
+public enum C
+{
+  CON1,CON2,CON3;
+}
+
+package pack2;
+class Manager
+{
+  public static void main(String[] args)
+  {
+    System.out.println(pack1.A.i);
+    System.out.println(pack1.A.test());
+    System.out.println(pack1.B.j);
+    System.out.println(pack1.B.k);
+    System.out.println(pack1.C.CON1);
+    System.out.println(pack1.A.CON2);
+  }
+}
+
+package pack2;
+import static pack1.A.*;
+//import pack1.A;
+class Manager5
+{
+  public static void main(String[] args)
+  {
+    System.out.println(i);
+    test();
+    A a1=new A();
+  }
+}
+
+package pack2;
+import static java.lang.System.*;
+class Manager14
+{
+  public static void main(String[] args)
+  {
+    out.println("1111");
+    exit(0);
+    out.println("2222");
+  }
+}
+
