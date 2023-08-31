@@ -1,0 +1,42 @@
+package pack1;
+@interface F
+{
+  public String someMessage();
+}
+class G
+{
+  @F(someMessage="My first method")
+  public static void main(String[] arg)
+  {
+    System.out.println("Hello World");
+  }
+}
+
+package pack1;
+@interface Ann2
+{
+  public int countValue();
+  public String someMessage() default "abc";
+}
+@Ann1(countValue=10)
+class L
+{
+  @Ann1
+  public int m;
+  @Ann1(someMessae="hello")
+  public static void main(String[] arg)
+  {
+    System.out.println("Hello World");
+  }
+}
+
+package pack3;
+import pack1.I;
+public class N
+{
+  public static void main(String[] arg)
+  {
+    I obj=new I();
+    System.out.println(obj.x);
+  }
+}
