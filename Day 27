@@ -1,0 +1,105 @@
+package pack1;
+class A
+{
+  public void test(int i)
+  {
+    System.out.println("int-arg");
+  }
+  public void test(float i)
+  {
+    System.out.println("float-arg");
+  }
+  public static void main(String[] arg)
+  {
+    A obj=new A();
+    obj.test(10);
+    obj.test(10.5f);
+    obj.test('a');
+    obj.test(101);
+    //obj.test(10.5);
+  }
+}
+
+/*how to print an array in reverse order*/
+package pack1;
+class A
+{
+  public static void main(String[] args)
+  {
+    int[] x={12,3,5,7,2,1};
+    for(int i=x.length-1;i>=0;i--)
+    {
+      System.out.println(x[i]);
+    }
+  }
+}
+
+package pack1;
+class C
+{
+  public static void main(String[] args)
+  {
+    int[] x={12,3,5,7,2,1};
+    int mid=(x.length/2);
+    for(int i=1;i<mid;i++)
+    {
+      System.out.println(x[i]);
+    }
+    System.out.println("------------");
+    for(int i=mid;i<x.length;i++)
+    {
+      System.out.println(x[i]);
+    }
+  }
+}
+
+package pack1;
+class D
+{
+  public static void main(String[] args)
+  {
+    int[] x={12,3,5,7,2,1};
+    int max=x[0];
+    for(int i=1;i<x.length;i++)
+    {
+      if(x[i]>max)
+      {
+        max=x[i];
+      }
+    }
+    System.out.println("The max value in "+max);
+  }
+}
+
+package pack1;
+class E
+{
+  public static void main(String[] args)
+  {
+    int[] x={12,3,5,7,2,1};
+    int min=x[0];
+    for(int i=1;i<x.length;i++)
+    {
+      if(x[i]<min)
+      {
+        min=x[i];
+      }
+    }
+    System.out.println("The max value in "+min);
+  }
+}
+
+package pack1;
+class E
+{
+  public static void main(String[] args)
+  {
+    int[] x={12,3,5,7,2,1};
+    int sum=0;
+    for(int i=0;i<x.length;i++)
+    {
+      sum+=x[i];
+    }
+    System.out.println("The max value in "+sum);
+  }
+}
