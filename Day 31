@@ -1,0 +1,36 @@
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+@Retention(RetentionPolicy.SOURCE);
+@interface Anno5
+{
+  public int countValue();
+}
+public class P
+{
+  @Anno5(countValue=5)
+  public static void main(String[] args)
+  {
+    System.out.println("Hello World");
+  }
+}
+
+package pack1;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+@Retention(RetentionPolicy.CLASS);
+@Target(ElementType.METHOD)
+@interface Anno6
+{
+  public String doStuff();
+  public int size() default 0;
+}
+public class Q
+{
+  @Anno6(doStuff="abc",size=100)
+  public static void main(String[] args)
+  {
+    System.out.println("Hello World again");
+  }
+}
