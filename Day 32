@@ -1,0 +1,131 @@
+package pack1;
+public class M1
+{
+  public static void main(String[] args)
+  {
+    int i=0;
+    Integer obj=new Integer(i);
+    int k=obj.intValue();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+public class M2
+{
+  public static void main(String[] args)
+  {
+    Double d1=new Double(10.09);
+    double d2=d1.doubleValue();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+public class M3
+{
+  public static void main(String[] args)
+  {
+    char c1='a';
+    Character c2=new Character(c1);
+    char c3=c2.charValue();
+    System.out.println(c3);
+  }
+}
+
+package pack1;
+public class M4
+{
+  public static void main(String[] args)
+  {
+    boolean b1=false;
+    Boolean b2=new Boolean(b1);
+    Boolean b3=new Boolean(true);
+    boolean b4=b2.booleanValue();
+    boolean b5=b3.booleanValue();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+public class M5
+{
+  public static void main(String[] args)
+  {
+    String s1="10";
+    Integer obj=new Integer(s1);
+    int i=obj.intValue();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+public class M6
+{
+  public static void main(String[] args)
+  {
+    String s1="9.989";
+    Double d1=new Double(s1);
+    double d2=d1.doubleValue();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+public class M7
+{
+  public static void main(String[] args)
+  {
+    String s1="10Z";
+    Byte b1=new Byte(s1);
+    byte b2=d1.byteValue();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+public class M8
+{
+  public static void main(String[] args)
+  {
+    String s1="true";
+    String s2="false";
+    String s3="abc";
+    Boolean b1=new Boolean(s1);
+    Boolean b2=new Boolean(s2);
+    Boolean b3=new Boolean(s3);
+    boolean b4=b1.booleanValue();
+    boolean b5=b2.booleanValue();
+    boolean b6=b3.booleanValue();
+    System.out.println(b4);
+    System.out.println(b5);
+    System.out.println(b6);
+  }
+}
+
+package pack1;
+public class M9
+{
+  public static void main(String[] args)
+  {
+    String s1="abc";
+    //Character c1=new Character(s1);
+    //char c2=c1.charValue();
+    System.out.println("done");
+  }
+}
+
+package pack1;
+public class M10
+{
+  public static void main(String[] args)
+  {
+    int i=10;
+    String s1="20";
+    Integer obj1=Integer.valueOf(i);
+    Integer obj2=Integer.valueOf(s1);
+    int m=obj1.intValue();
+    int n=obj2.intValue();
+    System.out.println("done");
+  }
+}
