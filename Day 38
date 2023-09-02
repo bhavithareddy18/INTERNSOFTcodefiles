@@ -1,0 +1,22 @@
+package pack3;
+class F
+{
+  int i;
+}
+public class G
+{
+  F f1;
+  int j;
+  public static void main(String[] args) throws CloneNotSupported
+  {
+    G g1=new G();
+    g1.f1=new F();
+    g1.f1.i=10;
+    g1.j=20;
+    G g2=(G)g1.clone();
+    g2.f1.i=40;
+    g2.j=50;
+    System.out.println(g1.f1.i);
+    System.out.println(g1.j);
+  }
+}
