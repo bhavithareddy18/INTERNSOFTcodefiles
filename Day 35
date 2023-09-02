@@ -1,0 +1,36 @@
+package pack2;
+public class E
+{
+  void test1()
+  {
+    System.out.println(1);
+    int i=10/0;
+    System.out.println(2);
+  }
+  void test2()
+  {
+    System.out.println(1);
+    try
+    {
+    }
+    catch(ArithmeticException ex)
+    {
+    }
+    System.out.println(2);
+  }
+}
+
+package pack5;
+public class N
+{
+  public static void main(String[] args)
+  {
+    System.err.println(3);
+    W w1=new W();
+    try{
+      W w1=new W();
+    }
+    catch(ClassNotFoundException ex){
+    }
+  }
+}
