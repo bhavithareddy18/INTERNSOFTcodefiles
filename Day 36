@@ -1,0 +1,16 @@
+package pack3;
+public class JavaHungry
+{
+  public static void main(String[] args)
+  {
+    try
+    {
+      ArithmeticException ae=new ArithmeticException();
+      throw ae;
+    }
+    catch(ArithmeticException e)
+    {
+      System.out.println("Caught the manually thrown Exception");
+    }
+  }
+}
