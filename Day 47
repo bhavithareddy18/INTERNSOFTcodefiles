@@ -1,0 +1,16 @@
+package pack3;
+import java.util.Hashtable;
+public class Manager34;
+{
+  public static void main(String[] args)
+  {
+    Hastable tab=new Hashtable<>();
+    tab.put("k1","e1");
+    tab.put("k2","e2");
+    tab.put("k3","e3");
+    tab.put("k4","e4");
+    System.out.println(tab.et("k1"));
+    System.out.println(tab.et("k4"));
+    System.out.println(tab.et("k2"));
+  }
+}
