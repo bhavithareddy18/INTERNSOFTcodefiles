@@ -1,0 +1,26 @@
+package pack1;
+public class A
+{
+  public static void main(String[] args)
+  {
+    int x[]=new int[2];
+    x[0]=10;
+    x[1]=20;
+  }
+}
+
+package pack1;
+import java.util.ArrayList;
+public class Manager2
+{
+  public static void main(String[] args)
+  {
+    ArrayList a1=new ArrayList();
+    a1.add(90);
+    a1.add(true);
+    int i=(Integer)a1.get(0);
+    boolean flag=(Boolean)a1.get(1);
+    System.out.println(i);
+    System.out.println(flag);
+  }
+}
