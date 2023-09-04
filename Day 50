@@ -1,0 +1,16 @@
+create table customer(sno int,name varchar2(90),age int,salary int,department varchar2(20));
+select * from customer;
+insert into customer values(1,'rajesh',23,10000,'Hr');
+insert into customer values(2,'ramana',28,12000,'Hr');
+insert into customer values(3,'raj',32,6000,'Software developer');
+insert into customer values(4,'joseph',40,50000,'Electrical');
+select sno,name from customer;
+select age,sno from customer;
+select name as fullname from customer;
+select * from customer where age<30;
+select * from customer;
+select name as fullname from customer group by department;
+select department from customer where sno > 2 group by department;
+
+select * from customer where name not like '_a%';
+select * from customer where name like '%i_a%';
