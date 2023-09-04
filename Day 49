@@ -1,0 +1,9 @@
+create table person(sno int,name varchar(90),salary int);
+desc person;
+select * FROM person;
+insert into person values(3,'vijay',10000);
+insert into person(sno,name) values(4,'joseph');
+insert into person(name,salary) values('ramesh',25000);
+insert into person(salary) values(30000);
+update person set name='bharath' where sno=1;
+update person set name='ram' where sno>3;
