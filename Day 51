@@ -1,0 +1,12 @@
+create table tab1(sno int not null,name varchar2(90),age int);
+insert into tab1 values(1,'abc',23);
+insert into tab1 values(2,'peter',25);
+insert into tab1(sno,age) values(3,25);
+select * from tab1;
+drop table tab1;
+
+create table tab2(sno int,name varchar(90), email varchar2(90),constraint pk24 primary key(sno));
+
+alter table tab5 add constraint uk18 unique(name);
+delete from tab5 where id=2;
+desc tab5;
