@@ -1,0 +1,8 @@
+drop table person;
+create table person(id int,name varchar2(90),age int,constraint uk10 unique(id));
+create table address(id int,house_no varchar2(90),street varchar2(90),constraint fk10 foreign key(id) references person(id));
+
+insert into person values(3,'mark');
+insert into person values(4,'john');
+rollback;
+insert into person values(5,'vijay');
