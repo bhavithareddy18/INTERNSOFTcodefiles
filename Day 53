@@ -1,0 +1,26 @@
+select nvl('C','B') as result from dual;
+
+select upper(productname) from products;
+select lower(productname) from products;
+select initcap(productname) from products;
+select substr(productname,3) from products;
+select substr(productname,3,4) from products;
+select concat(productname,'company') from products;
+select length(productname) from products;
+select LPAD(productname,5,'*') from products;
+
+select nullif('A','A' as result from dual;
+
+select coalesce(NULL,NULL,NULL,NULL,'E') as result from dual;
+select (10+5)/2 from dual;
+select upper('this is a string') from dual;
+select lower('THIS IS A LOWER CASE') from dual;
+select trim('           airobosoft             ') from dual;
+select replace('data management','data',database') from dual;
+
+select * from products;
+commit;
+delete from products;
+rollback;
+
+truncate table products;
