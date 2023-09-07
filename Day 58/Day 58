@@ -1,0 +1,34 @@
+package pack1;
+import java.sql.Connection;
+impor java.sql.Statement;
+public class Manager42
+{
+  public static void main(String[] args)
+  {
+    Connection con=null;
+    Statement stmt=null;
+    try
+    {
+      con=AUtil.getConnection();
+      stmt=con.createStatement();
+      String s1="create table employee(sno int,name varchar(90),age int,pic blob,constraint ep1 primary key(sno));
+      stmt.execute(s1);
+      String s2="insert into employee(sno,name,age) values(1,'ramu',25)";
+      String s3="insert into employee(sno,name,age) values(2,'vijay',42)";
+      String s4="insert into employee(sno,name,age) values(1,'pavan',62)";
+      stmt.execute(s2);
+      stmt.execute(s3);
+      stmt.execute(s4);
+      System.out.println("done");
+    }
+    catch(SQLException ex)
+    {
+      ex.printStackTrace();
+    }
+    finally
+    {
+      AUtil.closeStatement(stmt);
+      AUtil.closeConnection(con);
+    }
+  }
+}
