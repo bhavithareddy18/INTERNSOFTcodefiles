@@ -1,0 +1,16 @@
+package pack1;
+import java.sql.Connection;
+public class EUtil
+{
+  static
+  {
+    try
+    {
+      Class.forName("com.mysql.jdbc.Driver"); //mysql
+    }
+    catch(ClassNotFoundException ex)
+    {
+      ex.printStackTrace();
+    }
+  }
+}
