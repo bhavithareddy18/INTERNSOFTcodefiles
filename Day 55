@@ -1,0 +1,11 @@
+package pack1;
+import java.sql.Statement;
+public class Manager10
+{
+  public static void main(String[] args) throws Exception
+  {
+    Statement stmt=EUtil.getStatement();
+    stmt.execute("update employee set first_name='changed' where id=2");
+    System.out.println("done");
+  }
+}
