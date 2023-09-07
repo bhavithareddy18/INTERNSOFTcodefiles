@@ -24,3 +24,51 @@ delete from products;
 rollback;
 
 truncate table products;
+
+package com.banking;
+public interface Account
+{
+  public void deposit(Account account);
+  public void withdrawal(String accountNo,float amount);
+}
+
+package com.banking;
+public class SavingAccount implements Account
+{
+  private String accountNo;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private long contactNo;
+  private float balance;
+  private String accountType;
+  public String getFirstName()
+  {
+    return firstName;
+  }
+  public void setFirstName(String firstName) {
+    this.firstName=firstName;
+  }
+  public String getLastName() {
+    return lastName;
+  }
+  public void setLastName(String lastName) {
+    this.lastName=lastName;
+  }
+  public void setContactNo(long contactNo) {
+    this.contactNo=contactNo;
+  }
+  public float getBalance() {
+    return balance;
+  }
+  public void setBalance(float balance) {
+    this.balance=balance;
+  }
+  public String getAccountType() {
+    return accountType;
+  }
+  public void setAccountType(String accountType) {
+    this.accoundType=accountType;
+  }
+}
+
