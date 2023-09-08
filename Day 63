@@ -1,0 +1,30 @@
+package pack1;
+import java.io.IOException;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+public final class Servlet16 extends HttpServlet
+{
+  private static final long serialVersionUID=1L;
+  public Servlet16(int i)
+  {
+    System.out.println("constructor");
+  }
+  @Override
+  public void init(ServletConfig config) throws ServletException
+  {
+    System.out.println("this is init method");
+  }
+  @Override
+  public void service(HttpServletRequest request,HttpServletResponse response) throws ServletException
+  {
+    System.out.println("from service method");
+  }
+  @Override
+  public void destroy()
+  {
+    System.out.println("from destroy method");
+  }
+}
