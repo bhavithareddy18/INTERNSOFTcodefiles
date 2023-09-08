@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset="ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+  out.println("hello world");
+  out.println("hello world");
+%>
+</body>
+</html>
+
+<%@ page language="java" contentType="text/html; charset="ISO-8859-1" pageEncoding="ISO-8859-1" buffer="1kb" autoflush%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+  for(int i=1;i<=10000;i++)
+  {
+%>
+  <%=i %>
+
+  <%
+  }
+  %>
+</body>
+</html>
+
+<%@ page language="java" contentType="text/html; charset="ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+  String n1=request.getParameter("n1");
+  String n2=request.getParameter("n2");
+  Double d1=Double.parseDouble(n1);
+  Double d2=Double.parseDouble(n2);
+  Double sum=d1+d2;
+%>
+The sum is= <%=sum %>
+</body>
+</html>
