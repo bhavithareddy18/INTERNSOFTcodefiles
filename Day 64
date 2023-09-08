@@ -1,0 +1,19 @@
+package pack1;
+import java.io.IOException;
+@WebServlet("/Hello");
+public class Servlet3 extends HttpServlet
+{
+  private static final long serialVersionUID=1L;
+  protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException
+  {
+    String firstName=request.getParameter("first_name");
+    String lastName=request.getParameter(last_name");
+    Cookie CKfirstName=new Cookie("first_name",firstName);
+    Cookie CKlastName=new Cookie("last_name",lastName);
+    CKfirstName.setMaxAge(60*60*24);
+    CKlastName.setMaxAge(60*60*24);
+    response.addCookie(CKfirstName);
+    response.addCookie(CKlastName);
+    response.setContentType("text/html");
+  }
+}
