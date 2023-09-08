@@ -1,0 +1,24 @@
+package pack1;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+public class Servlet3 extends HttpServlet
+{
+  public void service(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException
+  {
+    String queryString=request.getQueryString();
+    PrintWriter out=response.getWriter();
+    String[] params[]=queryString.split("&");
+    String name,value;
+    int index=0;
+    for(String param: params)
+    {
+      index=param.indexOf("=");
+      name=param.substring(0,index);
+      value=param.substring(index+1,param.length());
+      out.println("name:"+name+"<br>");
+      out.println("value:"+value+"<br>");
+      out.println("<hr><br>");
+    }
+  }
+}
